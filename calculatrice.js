@@ -1,46 +1,60 @@
-const nombre1 = document.getElementById("nombre1").value
-const nombre2 = document.getElementById("nombre2").value
-const addition = document.getElementById("addition")
-const soustraction = document.getElementById("soustraction")
-const multiplication = document.getElementById("multiplication")
-const division = document.getElementById("division")
+const nombre1 = document.getElementById("nombre1")
+const nombre2 = document.getElementById("nombre2")
 const resultat = document.getElementById("resultat")
 
-function addition (a, b){
+
+
+function doAddition (a, b){
     return a+b
 }
 
-function soustraction (a, b){
+function doSoustraction (a, b){
     return a-b
 }
 
-function multiplication(a, b){
+function doMultiplication(a, b){
     return a*b
 }
 
-function division (a, b){
+function doDivision (a, b){
     return a/b
+}
+
+function convertStringToNumber(string) {
+  return Number(string)
+}
+
+function effacer() {
+  nombre1.value = ""
+  nombre2.value = ""
+}
+
+
+ const addition = function() {
+  resultat.innerHTML = "";
+  resultat.innerHTML = `Resultat: nombre1 + nombre2 = ${
+    doAddition(convertStringToNumber(nombre1.value), convertStringToNumber(nombre2.value))
+  }`;
+}
+
+ const soustraction = function() {
+  resultat.innerHTML = "";
+  resultat.innerHTML = `Resultat: nombre1 + nombre2 = ${
+    doSoustraction(convertStringToNumber(nombre1.value), convertStringToNumber(nombre2.value))
+  }`;
+}
+ const multiplication = function(event) {
+  resultat.innerHTML = "";
+  resultat.innerHTML = `Resultat: nombre1 + nombre2 = ${
+    doMultiplication(convertStringToNumber(nombre1.value), convertStringToNumber(nombre2.value))
+  }`;
+}
+ const division = function(event) {
+  resultat.innerHTML = "";
+  resultat.innerHTML = `Resultat: nombre1 + nombre2 = ${
+    doDivision(convertStringToNumber(nombre1.value), convertStringToNumber(nombre2.value))
+  }`;
 }
 
 
 
-soustraction.addEventListener("click", () => {
-   resultat.innerHTML = ""
-   resultat.innerHTML = `Resultat: nombre1 + nombre2 = ${nombre1 + nombre2}`
-   
-})
-
-addition.addEventListener("click", () => {
-  resultat.innerHTML = "";
-  resultat.innerHTML = `Resultat: nombre1 + nombre2 = ${nombre1 + nombre2}`;
-});
-
-multiplication.addEventListener("click", () => {
-  resultat.innerHTML = "";
-  resultat.innerHTML = `Resultat: nombre1 + nombre2 = ${nombre1 + nombre2}`;
-});
-
-division.addEventListener("click", () => {
-  resultat.innerHTML = "";
-  resultat.innerHTML = `Resultat: nombre1 + nombre2 = ${nombre1 + nombre2}`;
-});

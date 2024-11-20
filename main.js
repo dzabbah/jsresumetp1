@@ -11,7 +11,7 @@ s */
 - boolean
 - string 
 - number
-- undefined  //(qui n'est pas defini - variable nexiste pas - Ellena pas de valeur)
+- undefined  //(qui n'est pas defini - variable nexiste pas - Elle na pas de valeur)
 - null
 - symbol 
 */
@@ -21,4 +21,20 @@ s */
 - list
 - function
 */
+
+// >
+// >=
+// <
+// <=
+// ==
+// ===
+// != or !==
+
+// truthy or falsy
+const condition = ""
+if(condition){
+    console.log("vrai", typeof(condition))
+}else (
+    console.log("faux",typeof(condition))
+)
 
