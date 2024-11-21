@@ -30,11 +30,18 @@ s */
 // ===
 // != or !==
 
+// Opérateur Logique
+// && (et)
+// || (ou)
+
+// Opérateur D'inversion(!)
+
+// Opérateurs de conversion (!!)
+
 // truthy or falsy
-const condition = ""
-if(condition){
-    console.log("vrai", typeof(condition))
-}else (
-    console.log("faux",typeof(condition))
-)
+const condition = "Hello"
+const type = !!condition
+
+console.log("valeur:", type, "type:", typeof(type))
+
 
